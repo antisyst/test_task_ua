@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --var-color-white: #ffff;
+  --var-color-black: #000;
+  --var-color-main: #FF1F1F;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #131212;
+  height: max-content;
+  overflow-x: hidden;
+}
+html {
+  height: max-content;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+}
+a, button {
+  user-select: none;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+  width: 0;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  width: 0;
+  background: none;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: none;
+  width: 0;
+}
+img {
+  pointer-events: none;
+  user-select: none;
+}
+.svg_background {
+  text-align: center;
+  position: relative;
+  width: 1060px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 600px; 
+  padding:  5%;
+  background: url('./icons/border.svg') no-repeat center center;
+  background-size: contain;
+
+  @media only screen and (max-width: 990px) and (min-width: 768px) {
+    width: 700px;
+    height: 700px; 
+  }
+  
+  @media only screen and (max-width: 768px) and (min-width: 375px) {
+    width: 100%;
+    height: max-content; 
+  }
+
+
+
+  &::before {
+    position: absolute;
+    top: 0;
+    content: "";
+    background: url('./assets/eye_icon.png');
+    background-size: contain;
+    transform: translate(10%, 43%);
+    width: 85px;
+    background-repeat: no-repeat;
+    height: 85px;
+
+    @media only screen and (max-width: 990px) and (min-width: 768px) {
+      width: 70px;
+      height: 70px;
+    transform: translate(10%, 245%);
+
+    }
+  }
+}
+
+.rotated {
+  transform: rotate(180deg);
+}
+.footer_background {
+      height: 665px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 0 10%;
+      background-position: top;
+      background: url('./assets/footer_back.svg'), url(./assets/footer_main_back.png);
+      width: 100%;
+}
+.chat_last_content {
+  margin-top: 30px;
+}
+.fast_chat_section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7px;
+
+  a {
+    margin: 6px;
+
+    img {
+      width: 35px;
+    }
+  }
+}
